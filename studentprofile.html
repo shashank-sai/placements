@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Management System</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+    }
+
+    header {
+  background-color: #333;
+  color: #fff;
+  padding: 10px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+header img {
+  height: 40px; /* Set the height according to your design */
+  margin-right: 10px;
+}
+
+h1 {
+  margin: 0;
+}
+
+    nav {
+      background-color: #444;
+      color: #fff;
+      padding: 10px;
+      text-align: center;
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      margin: 0 10px;
+    }
+
+    main {
+      padding: 20px;
+    }
+
+    footer {
+      background-color: #333;
+      color: #fff;
+      padding: 10px;
+      text-align: center;
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+    }
+
+    h2, p {
+      color: cornsilk;
+      padding-left: 30px;
+      margin-left: 20px;
+    }
+
+    div {
+      height: 220px;
+      width: 220px;
+      background-color: azure;
+      border: 35px 25px 0px 25px;
+      padding-left: 30px;
+      margin-left: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <!-- Add the logo image here -->
+    <img src="C:\Users\sshas\OneDrive\Desktop\placements\Ed.png" alt="ElevateED Logo">
+    <h1>ElevateED</h1>
+  </header>
+
+  <nav>
+    <a href="./studentprofile.html" onclick="loadSection('student-profile')">Student Profile</a>
+    <a href="./CoordinatorAnalytics.html" onclick="loadSection('coordinator-analytics')">Coordinator Analytics</a>  
+    <a href="./admindatauploads.html" onclick="loadSection('data-uploads')">Admin Data Uploads</a>
+    <a href="./documentmanagement.html" onclick="loadSection('document-management')">Document Management</a>
+    <a href="customreport.html" onclick="loadSection('customizing-reporting')">Customizing Reporting</a>
+  </nav>
+
+  <main>
+    <h2>PROFILE PIC</h2>
+    <div><img src="http://pluspng.com/img-png/png-user-icon-icons-logos-emojis-users-2400.png" width="200px" height="200px"></div>
+    <p>Student Name: Raghavendhra</p> 
+    <p>Student Roll No: 22R21A6623</p>
+    <p>Department: CSM</p>
+    <p>Section: A</p>
+    <p>Avg Attendance: 77%</p>
+    <p>Total CGPA: 8.78</p>
+  </main>
+
+  <footer>
+    &copy; 2023 ElevateED
+  </footer>
+
+</body>
+</html>

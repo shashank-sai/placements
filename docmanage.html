@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Management System</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        header img {
+            height: 40px;
+            margin-right: 10px;
+        }
+
+        h1 {
+            margin: 0;
+        }
+
+        nav {
+            background-color: #444;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+
+        main {
+            padding: 20px;
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        h2,
+        p {
+            color: cornsilk;
+            padding-left: 30px;
+            margin-left: 20px;
+        }
+
+        .container {
+            margin-top: 20px;
+        }
+
+        h2 {
+            color: #f8f9fa;
+        }
+
+        #fileInput {
+            display: none;
+        }
+
+        .file-upload-btn {
+            margin-bottom: 10px;
+        }
+
+        .document-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .document-item {
+            margin-bottom: 10px;
+            padding: 10px;
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        .delete-btn {
+            margin-top: 5px;
+        }
+
+        a {
+            color: #f8f9fa;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <img src="C:\Users\sshas\OneDrive\Desktop\placements\Ed.png" alt="ElevateED Logo">
+        <h1>ElevateED</h1>
+    </header>
+
+    <nav>
+        <a href="./studentprofile.html" onclick="loadSection('student-profile')">Student Profile</a>
+        <a href="./CoordinatorAnalytics.html" onclick="loadSection('coordinator-analytics')">Coordinator Analytics</a>
+        <a href="./admindatauploads.html" onclick="loadSection('data-uploads')">Admin Data Uploads</a>
+        <a href="docmanage.html" onclick="loadSection('document-management')">Document Management</a>
+        <a href="./customreport.html" onclick="loadSection('customizing-reporting')">Customizing Reporting</a>
+    </nav>
+
+    <div class="container">
+        <h2 class="text-center">Upload Documents</h2>
+        <div class="file-upload-btn">
+            <label for="fileInput" class="btn btn-primary">Upload Document</label>
+            <input type="file" id="fileInput" accept=".pdf, .doc, .docx" onchange="handleFileUpload()">
+        </div>
+        <h2 class="text-center">Document List</h2>
+        <ul class="document-list" id="documentList">
+            <!-- Document items will be displayed here -->
+        </ul>
+    </div>
+
+    <script>
+        function handleFileUpload() {
+            var fileInput = document.getElementById('fileInput');
+            var documentList = document.getElementById('documentList');
+
+            // Get the selected file
+            var file = fileInput.files[0];
+
+            // Create a list item for the document
+            var listItem = document.createElement('li');
+            listItem.className = 'document-item';
+
+            // Display the document name and a delete button
+            listItem.innerHTML = '<p>' + file.name + '</p>' +
+                '<button class="btn btn-danger delete-btn" onclick="deleteDocument(this)">Delete</button>';
+
+            // Append the list item to the document list
+            documentList.appendChild(listItem);
+
+            // Clear the file input
+            fileInput.value = '';
+        }
+
+        function deleteDocument(button) {
+            var listItem = button.parentNode;
+            var documentList = document.getElementById('documentList');
+            documentList.removeChild(listItem);
+        }
+    </script>
+
+    <main>
+
+    </main>
+
+    <footer>
+        &copy; 2023 ElevateED
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</body>
+
+</html>

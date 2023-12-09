@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="image.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Management System</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            background-image: url("https://universalbackground.com/wordpress/wp-content/uploads/2016/07/shutterstock_290015294.jpg");
+            background-size: cover;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        header img {
+            height: 40px; /* Set the height according to your design */
+            margin-right: 10px;
+        }
+
+        h1 {
+            margin: 0;
+            padding-left: 30px;
+            margin-left: 20px;
+        }
+
+        nav {
+            background-color: #444;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+
+        main {
+            padding: 20px;
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <!-- Add the logo image here -->
+        <img src="C:\Users\sshas\OneDrive\Desktop\placements\Ed.png" alt="ElevateED Logo" style="height: 50px; margin-right: 10px;">
+        <h1>ElevateED</h1>
+    </header>
+
+    <nav>
+        <a href="./studentprofile.html" onclick="loadSection('student-profile')">Student Profile</a>
+        <a href="./CoordinatorAnalytics.html" onclick="loadSection('coordinator-analytics')">Coordinator Analytics</a>
+        <a href="./admindatauploads.html" onclick="loadSection('data-uploads')">Admin Data Uploads</a>
+        <a href="docmanage.html" onclick="loadSection('document-management')">Document Management</a>
+        <a href="customreport.html" onclick="loadSection('customizing-reporting')">Customizing Reporting</a>
+    </nav>
+
+    <main>
+        <h1>ANALYTICS DASHBOARD</h1>
+        <h2>Placement analytics</h2>
+        <p>Total students: 150</p>
+        <p>Placed students: 120</p>
+        <p>Placement rate: 80%</p>
+        <p>Average salary: 7LPA</p>
+    </main>
+
+    <footer>
+        &copy; 2023 Elevate ED
+    </footer>
+
+</body>
+
+</html>
